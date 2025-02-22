@@ -1,0 +1,41 @@
+{
+  "$schema": "https://docs.renovatebot.com/renovate-schema.json",
+  "gitAuthor": "Renovate Bot <bot@renovateapp.com>",
+  "semanticCommits": "enabled",
+  "platformAutomerge": true,
+  "dependencyDashboard": true,
+  "nix": {
+    "enabled": true
+  },
+  "lockFileMaintenance": {
+    "enabled": true,
+    "automerge": true,
+    "schedule": [
+      "before 3am"
+    ]
+  },
+  "packageRules": [
+    {
+      "addLabels": [
+        "patch"
+      ],
+      "matchUpdateTypes": [
+        "patch",
+        "pin",
+        "digest"
+      ],
+      "automerge": true
+    },
+    {
+      "addLabels": [
+        "minor",
+        "major"
+      ],
+      "matchUpdateTypes": [
+        "minor",
+        "major"
+      ],
+      "automerge": false
+    }
+  ]
+}

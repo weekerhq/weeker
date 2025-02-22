@@ -1,0 +1,20 @@
+name: renovate
+on:
+  issues:
+    types: [edited]
+  workflow_dispatch:
+  schedule:
+    # run hourly
+    - cron: "0 * * * *"
+jobs:
+  renovate:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 30
+    steps:
+      - uses: renovatebot/github-action@v41.0.12
+        env:
+          RENOVATE_AUTODISCOVER: true
+          RENOVATE_AUTODISCOVER_FILTER: "weekerhq/*"
+          LOG_LEVEL: debug
+        with:
+          token: ${{ secrets.RENOVATE_TOKEN }}
