@@ -1,0 +1,13 @@
+# generated
+generated/
+*.generated.*
+.astro/
+
+# cache
+.cache/
+
+# build
+dist/
+
+# node
+node_modules/

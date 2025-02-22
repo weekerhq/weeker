@@ -2,5 +2,13 @@
   "dockerComposeFile": "compose.yaml",
   "workspaceFolder": "/workspaces/${localWorkspaceFolderBasename}",
   "service": "devcontainer",
-  "postStartCommand": "run/init"
+  "postStartCommand": "run/init",
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "astro-build.astro-vscode",
+        "folke.vscode-monorepo-workspace"
+      ]
+    }
+  }
 }
