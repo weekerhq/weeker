@@ -3,6 +3,7 @@
   "workspaceFolder": "/workspaces/${localWorkspaceFolderBasename}",
   "service": "devcontainer",
   "postStartCommand": "run/init",
+  "containerUser": "dev",
   "customizations": {
     "vscode": {
       "extensions": [
