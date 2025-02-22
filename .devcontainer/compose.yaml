@@ -1,0 +1,11 @@
+services:
+  devcontainer:
+    hostname: devcontainer
+    build:
+      dockerfile: Dockerfile
+    # overrides default command to avoid a shutdown of container before vscode established a connection
+    # https://code.visualstudio.com/docs/remote/create-dev-container#_extend-your-docker-compose-file-for-development
+    entrypoint: ["bash", "-c", "while sleep 1000; do :; done"]
+    volumes:
+      - ..:/workspaces/weeker
+      - /var/run/docker.sock:/var/run/docker.sock

@@ -1,0 +1,17 @@
+#!/usr/bin/env bats
+set -euo pipefail
+
+@test "Current user is 'dev'" {
+  run whoami
+  [ "$output" = "dev" ]
+}
+
+@test "Git is installed" {
+  run git --version
+  [ $status -eq 0 ]
+}
+
+@test "Node version matches expected version" {
+  run node -v
+  [ "${output#v}" = "${NODE_VERSION}" ]
+}
