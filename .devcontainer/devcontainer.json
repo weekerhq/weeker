@@ -2,6 +2,5 @@
   "dockerComposeFile": "compose.yaml",
   "workspaceFolder": "/workspaces/${localWorkspaceFolderBasename}",
   "service": "devcontainer",
-  "postStartCommand": "run/init",
-  "containerUser": "dev"
+  "postStartCommand": "run/init"
 }

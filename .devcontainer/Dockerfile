@@ -37,3 +37,7 @@ RUN apt-get install -y --no-install-recommends \
 RUN apt-get autoremove -y && \
     apt-get clean -y && \
     cd /tmp && rm -rf *
+
+# patch ~/.bashrc
+COPY .bashrc /usr/lib/devcontainer/.bashrc
+RUN cat /usr/lib/devcontainer/.bashrc >> /home/dev/.bashrc
