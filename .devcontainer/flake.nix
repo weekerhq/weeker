@@ -12,6 +12,7 @@
             nodejs_23
             git
             bats
+            pulumi
           ];
         };
       });

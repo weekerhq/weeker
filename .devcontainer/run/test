@@ -15,3 +15,8 @@ set -euo pipefail
   run node --version
   [ $status -eq 0 ]
 }
+
+@test "Pulumi is installed" {
+  run pulumi version
+  [ $status -eq 0 ]
+}
