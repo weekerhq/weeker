@@ -10,4 +10,4 @@ __      __          _
 
 EOF
 
-.devcontainer/test.sh
+.devcontainer/run/test
