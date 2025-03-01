@@ -8,7 +8,8 @@
     "vscode": {
       "extensions": [
         "astro-build.astro-vscode",
-        "folke.vscode-monorepo-workspace"
+        "folke.vscode-monorepo-workspace",
+        "ms-azuretools.vscode-docker"
       ]
     }
   }

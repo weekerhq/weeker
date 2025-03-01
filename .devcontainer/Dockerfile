@@ -35,6 +35,10 @@ RUN apt-get autoremove -y && \
 COPY .bashrc /usr/lib/devcontainer/.bashrc
 RUN cat /usr/lib/devcontainer/.bashrc >> ${NON_ROOT_USER_HOME}/.bashrc
 
+# add user to docker group
+RUN groupadd -g 800 docker && \
+    usermod -aG docker ${NON_ROOT_USER} 
+
 # install nix
 RUN mkdir /nix && \
     chown ${NON_ROOT_USER} /nix

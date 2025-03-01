@@ -14,6 +14,7 @@
             bats
             pulumi
             pnpm
+            docker
           ];
         };
       });
