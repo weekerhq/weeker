@@ -2,5 +2,8 @@
   "name": "weeker",
   "version": "0.1.0",
   "private": true,
-  "type": "module"
+  "type": "module",
+  "devDependencies": {
+    "nx": "^20.4.6"
+  }
 }

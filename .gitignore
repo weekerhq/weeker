@@ -12,3 +12,6 @@ dist/
 # node
 node_modules/
 .pnpm-store/
+
+# nx
+.nx/

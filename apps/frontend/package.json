@@ -3,6 +3,8 @@
   "type": "module",
   "version": "0.1.0",
   "scripts": {
+    "ci": "echo 'done'",
+    "init": "pnpm --filter . --frozen-lockfile install",
     "dev": "astro dev --host",
     "build": "astro build"
   },

@@ -6,5 +6,8 @@
   "files": ["src"],
   "exports": {
     "./*": "./src/*"
+  },
+  "scripts": {
+    "ci": "echo 'done'"
   }
 }
