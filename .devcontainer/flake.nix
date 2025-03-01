@@ -13,6 +13,7 @@
             git
             bats
             pulumi
+            pnpm
           ];
         };
       });

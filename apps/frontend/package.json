@@ -7,7 +7,7 @@
     "build": "astro build"
   },
   "dependencies": {
-    "@weekerhq/asset-logo": "*",
+    "@weekerhq/asset-logo": "workspace:*",
     "astro": "^5.3.0"
   }
 }
