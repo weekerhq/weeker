@@ -13,8 +13,10 @@
             git
             bats
             pulumi
+            pulumiPackages.pulumi-language-nodejs
             pnpm
             docker
+            google-cloud-sdk
           ];
         };
       });
