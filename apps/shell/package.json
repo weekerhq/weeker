@@ -5,7 +5,10 @@
   "scripts": {
     "ci": "echo 'done'",
     "init": "pnpm --filter . --frozen-lockfile install",
-    "dev": "node --watch src/index.ts"
+    "build": "echo 'done'",
+    "dev": "node --watch src/index.ts",
+    "pack": "TAG=main-${SYSTEM_ARCH} docker compose build",
+    "publish": "TAG=main-${SYSTEM_ARCH} docker compose push && docker manifest create --amend ghcr.io/weekerhq/weeker/shell:main ghcr.io/weekerhq/weeker/shell:main-${SYSTEM_ARCH}"
   },
   "dependencies": {
     "@hono/node-server": "^1.13.8",

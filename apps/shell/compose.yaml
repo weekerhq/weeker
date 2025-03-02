@@ -1,0 +1,5 @@
+services:
+  app:
+    image: ghcr.io/weekerhq/weeker/shell:${TAG}
+    build:
+      dockerfile: Dockerfile

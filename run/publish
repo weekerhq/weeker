@@ -1,0 +1,4 @@
+#!/bin/bash
+set -euo pipefail
+
+npx nx run-many --target publish

@@ -15,6 +15,7 @@
             pulumi
             pnpm
             docker
+            gh
           ];
         };
       });

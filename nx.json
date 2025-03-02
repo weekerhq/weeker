@@ -22,13 +22,29 @@
     ]
   },
   "targetDefaults": {
-    "ci": {
-      "cache": true,
-      "dependsOn": ["init"]
-    },
     "init": {
       "cache": true,
       "inputs": ["sharedGlobals", "pnpm"]
+    },
+    "build": {
+      "dependsOn": ["init", "^build"],
+      "cache": true,
+      "inputs": ["default"],
+      "outputs": ["{projectRoot}/dist"]
+    },
+    "pack": {
+      "dependsOn": ["init", "build"],
+      "cache": true,
+      "inputs": ["default"]
+    },
+    "ci": {
+      "dependsOn": ["build", "pack"],
+      "cache": true
+    },
+    "publish": {
+      "dependsOn": ["ci", { "projects": "weeker", "target": "auth:github" }],
+      "cache": true,
+      "inputs": ["default"]
     }
   }
 }

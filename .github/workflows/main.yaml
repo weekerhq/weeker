@@ -36,7 +36,9 @@ jobs:
           imageTag: latest-${{ matrix.platform.name }}
           cacheFrom: ghcr.io/weekerhq/weeker/devcontainer:latest-${{ matrix.platform.name }}
           push: always
-          runCmd: run/ci
+          env: |
+            GITHUB_TOKEN=${{ secrets.GITHUB_TOKEN }}
+          runCmd: run/publish
       - uses: actions/cache/save@v4
         with:
           path: |
