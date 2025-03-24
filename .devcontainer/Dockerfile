@@ -1,4 +1,4 @@
-FROM debian:12.9-slim
+FROM debian:12.10-slim
 
 # use bash inside running container
 ENV SHELL=/bin/bash
