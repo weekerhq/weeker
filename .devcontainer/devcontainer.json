@@ -10,7 +10,8 @@
         "astro-build.astro-vscode",
         "folke.vscode-monorepo-workspace",
         "ms-azuretools.vscode-docker",
-        "github.vscode-github-actions"
+        "github.vscode-github-actions",
+        "Vue.volar"
       ]
     }
   }

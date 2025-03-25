@@ -1,32 +1,8 @@
 ---
-import Layout from '../layouts/Layout.astro';
-import Logo from "@weekerhq/asset-logo/logo.svg";
+import Layout from '../Layout.astro';
+import AboutModule from "@weekerhq/about-frontend"
 ---
 
 <Layout>
-	<div class="container">
-		<Logo class="logo" />
-		<div class="coming-soon">coming soon</div>
-	</div>
+	<AboutModule />
 </Layout>
-
-<style>
-.container {
-	display: flex;
-	height: 100%;
-	flex-direction: column;
-	justify-content: center;
-	align-items: center;
-}
-
-.logo {
-	max-width: 300px;
-	padding: 8px;
-	height: auto;
-}
-
-.coming-soon {
-	font-family: Arial, Helvetica, sans-serif;
-	user-select: none;
-}
-</style>

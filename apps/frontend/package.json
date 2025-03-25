@@ -9,7 +9,10 @@
     "build": "astro build"
   },
   "dependencies": {
-    "@weekerhq/asset-logo": "workspace:*",
-    "astro": "^5.3.0"
+    "@astrojs/vue": "^5.0.7",
+    "@weekerhq/shared-logo": "workspace:*",
+    "@weekerhq/about-frontend": "workspace:*",
+    "astro": "^5.3.0",
+    "vue": "^3.5.13"
   }
 }
