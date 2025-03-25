@@ -16,8 +16,8 @@
     "pnpm": [
       "{projectRoot}/package.json",
       "{projectRoot}/pnpm-lock.yaml",
-      "{projectRoot}/pnpm-workspace.yaml",
-      "{projectRoot}/.npmrc",
+      "{workspaceRoot}/pnpm-workspace.yaml",
+      "{workspaceRoot}/.npmrc",
       { "runtime": "bash -c '[ -d '/workspaces/weeker/node_modules' ] && echo 'true' || date'" }
     ]
   },
