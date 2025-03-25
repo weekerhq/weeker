@@ -23,6 +23,7 @@
   },
   "targetDefaults": {
     "ci": {
+      "executor": "nx:noop",
       "dependsOn": ["build", "test", "pack"],
       "cache": true
     },
@@ -32,22 +33,42 @@
     },
     "build": {
       "dependsOn": ["init", "^build"],
+      "executor": "nx:run-commands",
+      "options": {
+        "cwd": "{projectRoot}",
+        "command": "if [ -d run/build ]; then run/build/index; else run/build; fi"
+      },
       "cache": true,
       "inputs": ["default"],
       "outputs": ["{projectRoot}/dist"]
     },
     "test": {
       "dependsOn": ["init"],
+      "executor": "nx:run-commands",
+      "options": {
+        "cwd": "{projectRoot}",
+        "command": "if [ -d run/test ]; then run/test/index; else run/test; fi"
+      },
       "cache": true,
       "inputs": ["default"]
     },
     "pack": {
       "dependsOn": ["init", "build"],
+      "executor": "nx:run-commands",
+      "options": {
+        "cwd": "{projectRoot}",
+        "command": "if [ -d run/pack ]; then run/pack/index; else run/pack; fi"
+      },
       "cache": true,
       "inputs": ["default"]
     },
     "publish": {
       "dependsOn": ["ci", { "projects": "weeker", "target": "auth:github" }],
+      "executor": "nx:run-commands",
+      "options": {
+        "cwd": "{projectRoot}",
+        "command": "if [ -d run/publish ]; then run/publish/index; else run/publish; fi"
+      },
       "cache": true,
       "inputs": ["default"]
     }

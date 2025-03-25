@@ -1,8 +1,7 @@
 {
   "name": "weeker",
-  "version": "0.1.0",
-  "private": true,
   "type": "module",
+  "version": "0.1.0",
   "nx": {
     "targets": {
       "auth:github": {

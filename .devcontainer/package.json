@@ -1,13 +1,10 @@
 {
   "name": "@weekerhq/devcontainer",
   "version": "0.1.0",
-  "private": true,
   "nx": {
     "targets": {
       "ci": {},
-      "test": {
-        "command": "{projectRoot}/run/test"
-      }
+      "test": {}
     }
   }
 }

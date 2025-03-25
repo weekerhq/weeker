@@ -1,0 +1,7 @@
+#!/bin/bash
+set -euo pipefail
+
+export TAG=main-${SYSTEM_ARCH}
+
+docker compose push
+docker manifest create --amend ghcr.io/weekerhq/weeker/shell:main ghcr.io/weekerhq/weeker/shell:${TAG}

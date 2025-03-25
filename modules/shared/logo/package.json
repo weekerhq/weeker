@@ -1,13 +1,16 @@
 {
   "name": "@weekerhq/shared-logo",
-  "version": "0.1.0",
-  "private": true,
   "type": "module",
-  "files": ["src"],
+  "version": "0.1.0",
+  "nx": {
+    "targets": {
+      "ci": {}
+    }
+  },
+  "files": [
+    "src"
+  ],
   "exports": {
     "./*": "./src/*"
-  },
-  "scripts": {
-    "ci": "echo 'done'"
   }
 }

@@ -38,7 +38,9 @@ jobs:
           push: always
           env: |
             GITHUB_TOKEN=${{ secrets.GITHUB_TOKEN }}
-          runCmd: run/publish
+          runCmd: |
+            run/ci
+            run/publish
       - uses: actions/cache/save@v4
         with:
           path: |
