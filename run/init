@@ -10,6 +10,4 @@ __      __          _
 
 EOF
 
-.devcontainer/run/test
-
 pnpm --frozen-lockfile install
