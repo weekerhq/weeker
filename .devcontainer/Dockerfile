@@ -48,5 +48,6 @@ ENV HOME=${NON_ROOT_USER_HOME}
 RUN curl -sL https://nixos.org/nix/install | sh -s -- --no-daemon
 ENV PATH="${HOME}/.nix-profile/bin:${PATH}"
 
+# install nix packages
 COPY flake.nix flake.lock ${HOME}/
 RUN nix --extra-experimental-features "nix-command flakes" profile install ${HOME}

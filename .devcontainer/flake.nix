@@ -12,7 +12,6 @@
             nodejs_23
             git
             bats
-            pulumi
             pnpm
             docker
             gh
