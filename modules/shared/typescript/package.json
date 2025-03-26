@@ -1,7 +1,6 @@
 {
-  "name": "@weekerhq/shared-logo",
+  "name": "@weekerhq/shared-typescript",
   "type": "module",
-  "version": "0.1.0",
   "nx": {
     "targets": {
       "ci": {},
@@ -11,5 +10,9 @@
   "files": ["dist"],
   "exports": {
     "./*": "./dist/*"
+  },
+  "peerDependencies": {
+    "@types/node": "^22.0.0",
+    "typescript": "~5.6.0"
   }
 }

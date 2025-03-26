@@ -1,0 +1,9 @@
+{
+  "extends": "@weekerhq/shared-typescript/tsconfig.web.json",
+  "include": [".astro/types.d.ts", "src/**/*", "src/**/*.json", "src/**/*.vue", "src/**/*.astro"],
+  "exclude": ["src/**/*.spec.ts", "src/**/*.test.ts"],
+  "compilerOptions": {
+    "rootDir": "src",
+    "outDir": "dist"
+  }
+}

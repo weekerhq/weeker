@@ -5,6 +5,8 @@
   "nx": {
     "targets": {
       "ci": {},
+      "check": {},
+      "build": {},
       "pack": {},
       "publish": {}
     }
@@ -14,6 +16,8 @@
     "hono": "^4.7.2"
   },
   "devDependencies": {
-    "@types/node": "^22.13.8"
+    "@types/node": "^22.13.8",
+    "@weekerhq/shared-typescript": "workspace:*",
+    "typescript": "^5.8.2"
   }
 }

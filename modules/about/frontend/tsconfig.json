@@ -1,28 +1,11 @@
 {
-  "$schema": "https://json.schemastore.org/tsconfig",
-  "include": [
-    "src/**/*",
-    "src/**/*.json",
-    "src/**/*.vue"
-  ],
-  "exclude": [
-    "src/**/*.spec.ts"
-  ],
-  "compilerOptions": {
-    "tsBuildInfoFile": ".cache/tsconfig.tsbuildinfo",
-    "strict": true,
-    "module": "ESNext",
-    "moduleResolution": "Bundler",
-    "target": "ES2023",
-    "resolveJsonModule": true,
-    "checkJs": true,
-    "skipLibCheck": true,
-    "verbatimModuleSyntax": true,
-    "emitDeclarationOnly": true,
-    "declaration": true,
-    "declarationMap": true,
-    "lib": ["ESNext", "DOM"],
-    "rootDir": "src",
-    "outDir": "dist"
-  }
+  "files": [],
+  "references": [
+    {
+      "path": "./tsconfig.build.json"
+    },
+    {
+      "path": "./tsconfig.lib.json"
+    }
+  ]
 }

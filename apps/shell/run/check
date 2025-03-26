@@ -1,0 +1,6 @@
+#!/bin/bash
+set -euo pipefail
+
+for file in tsconfig.*.json; do
+    npx tsc -p $file
+done

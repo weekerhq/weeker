@@ -24,12 +24,22 @@
   "targetDefaults": {
     "ci": {
       "executor": "nx:noop",
-      "dependsOn": ["build", "test", "pack"],
+      "dependsOn": ["check", "build", "test", "pack"],
       "cache": true
     },
     "init": {
       "cache": true,
       "inputs": ["sharedGlobals", "pnpm"]
+    },
+    "check": {
+      "dependsOn": ["init", "^build"],
+      "executor": "nx:run-commands",
+      "options": {
+        "cwd": "{projectRoot}",
+        "command": "if [ -d run/check ]; then run/check/index; else run/check; fi"
+      },
+      "cache": true,
+      "inputs": ["default"]
     },
     "build": {
       "dependsOn": ["init", "^build"],

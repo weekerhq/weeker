@@ -2,3 +2,4 @@
 set -euo pipefail
 
 npx vite build
+npx vue-tsc -p tsconfig.lib.json --noEmit false

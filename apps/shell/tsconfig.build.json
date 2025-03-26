@@ -1,0 +1,7 @@
+{
+  "extends": "@weekerhq/shared-typescript/tsconfig.node.json",
+  "include": ["*", "*.json"],
+  "compilerOptions": {
+    "rootDir": "."
+  }
+}
