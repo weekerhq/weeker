@@ -12,7 +12,7 @@ importers:
         specifier: ^22.0.0
         version: 22.13.13
       typescript:
-        specifier: ~5.6.0
+        specifier: ~5.6.0 || ~5.8.0
         version: 5.6.3
 
 packages:
