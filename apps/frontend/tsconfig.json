@@ -4,9 +4,7 @@
     ".astro/types.d.ts",
     "**/*"
   ],
-  "exclude": [
-    "dist"
-  ],
+  "exclude": ["dist"],
   "compilerOptions": {
     "jsx": "preserve"
   }
