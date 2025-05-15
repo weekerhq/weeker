@@ -1,4 +1,4 @@
-FROM node:23.10.0-slim AS dependencies
+FROM node:24.0.2-slim AS dependencies
 WORKDIR /app
 
 COPY package.json pnpm-lock.yaml ./
